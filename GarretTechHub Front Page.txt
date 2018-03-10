@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+
+</title></head>
+<body>
+    <form method="post" action="./final.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2MTY2ODcyMjlkZP/6yF0ntWtj0N2/2Qqk3Q8ERbxSfqDbrWWZZ0vWJMON" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="81D487F6" />
+</div>
+        <div>
+        </div>
+    </form>
+    <span class="style1">Management 330 Final Project</span>
+    <h1>SneakerHead Haven Forum Web Application</h1>
+    <span class="style2">Create Your Account Information to join the Forum</span> <a href="sh-create.aspx">sh-create.aspx</a><br />
+    <span class="style2">Retrieve your Account Information</span> <a href="sh-retrieve.aspx">sh-retrieve.aspx</a><br />
+    <span class="style2">Update your Account Information</span> <a href="sh-update.aspx">sh-update.aspx</a><br />
+    <span class="style2">Delete your Account Information</span> <a href="sh-delete.aspx">sh-delete.aspx</a><br />
+
+    <style>
+        .style1{color:darkgray;}
+        .style2{color:darkslategray;font-weight:bold;font-size:16px;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+    </style>
+</body>
+</html>
