@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1><b><span class="style4">Sales Calculator</span></b></h1>
+    <br />
+    <img style="width:200px" src="sales_commission_calculator-resized-600.jpg" />
+    <br />
+    <script>
+    function calcSales()
+    {
+        var price, taxrate, tax, total;
+
+        //INPUT
+        if (inItem.value == "Shirt")
+        {
+            price = 25;
+        }
+        else if (inItem.value == "Pant")
+        {
+            price = 60;
+        }
+        else if (inItem.value == "Shoes")
+        {
+            price = 100;
+        }
+        else
+        {
+            price = 0; //Free!
+        }
+        if (inState.value=="New Mexico")
+        {
+            taxrate = .10;
+        }
+        else if (inState.value == "Arizona")
+        {
+            taxrate = .15;
+        }
+        else if (inState.value == "California")
+        {
+            taxrate = .20;
+        }
+        else if (inState.value == "New York")
+        {
+            taxrate = .30;
+        }   
+        else 
+        {
+            taxrate = 1; //Free!
+        }
+        //PROCESS
+        tax = price * taxrate;
+        total = price + tax;
+
+        //OUTPUT
+        OTax.innerHTML = tax;
+        OTotal.innerHTML = total;
+    }
+    </script>
+    <style>
+        .style1 {font-family: Arial, Helvetica, sans-serif;}
+        .style2 {font-family: Arial, Helvetica, sans-serif;color: darkkhaki;font-size: 16pt;}
+        .style3{font-family:'Comic Sans MS';color:blue;}
+        .style4 {color: darkkhaki;font-family: Arial, Helvetica, sans-serif;}
+        .style5 {background-color:lightcyan;}
+    </style>
+</head>
+<body>
+    <br />
+    <span class="style1"><b>Enter Item</b></span><select class="style5" id="inItem" type="text" /><br />
+    <option></option><option>Shirt</option><option>Pant</option><option>Shoes</option></select><br/>
+    <span class="style1"><b>Enter State</b></span><select class="style5" id="inState" type="text" /><br />
+    <option></option><option>New Mexico</option><option>Arizona</option><option>California</option><option>New York</option></select><br />
+    <input type="button" value="Calculate Sales" onClick="calcSales()" />
+    <br/>
+    <br/>
+    <span class="style2"><b>Your Tax -->$</span><span style="font-size:16pt"; id="OTax"></span></b><br />
+    <span class="style2"><b>Your Total -->$</span><span style="font-size:16pt"; id="OTotal"></span></b><br />
+    <br />
+    <br/>
+    <b><span class="style3">Back to </b></span>
+    <a href="Index.html">Home</a>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script>
+       var scores, iscores; 
+
+       function Bob() {
+           scores = [];
+           iscores = 0;
+           dvScores.innerHTML = "";
+           spAverage.innerHTML = "";
+           inScore.value = "";
+
+       }
+
+       function insertScore() {
+           var j;
+           //input
+           scores[iscores] = parseFloat(inScore.value);
+           //Processing
+           iscores = iscores + 1;
+           //output
+           dvScores.innerHTML = "";
+           for (j = 0; j < scores.length; j = j + 1) {
+               dvScores.innerHTML += scores[j]+"<br/>";
+           }
+       } 
+
+       function calculateAverage() {
+           var total, average, j, onescore;
+
+           total = 0;
+           for (j = 0; j < scores.length; j = j + 1) {
+               //input
+               onescore = parseFloat(scores[j]);
+               //processing
+               total = total + onescore;
+           }
+           //continuedProcessing
+           average = total / scores.length;
+
+           //output
+           spAverage.innerHTML = average.toFixed(2);
+
+       }
+   </script>
+    <style>
+        .style1{font-weight:bold;color:blue;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+    </style>
+</head>
+
+<body onload="Bob()">
+    <h1>Welcome to my Average Score Web App</h1>
+    <img style="width:100px" src="calc.jpg"/><br/><br/>
+    <span class="style1">Enter Score:</span><input type="text" id="inScore"/>
+    <input type="button" value="Insert Score" onClick="insertScore()"/><br/>
+    <span class="style1">Scores Array Content:</span><div id="dvScores"></div>
+    <span class="style1">Average=</span><span id="spAverage">0</span>
+    <input type="button" value="Calculate Average" onClick="calculateAverage()"/>
+    <input type="button" value="Clear" onClick="Bob()"/>
+ 
+</body>
+</html>
